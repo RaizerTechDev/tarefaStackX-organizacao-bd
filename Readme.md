@@ -3,6 +3,7 @@
 ## Índice
 
 - [Objetivo](#-objetivo)
+- [Documentação](#)
 - [Instalação](#instalação-com-bash)
 - [Gerenciamento de Tabelas - Operações de Listar e Deletar](#gerenciamento-de-tabelas---operações-de-listar-e-deletar)
 - [Demonstração Código Resumido](#demonstração-código-resumido)
@@ -28,11 +29,13 @@ Descreva como você organizaria um banco de dados que precisa , no inicio, de:
 ⏭️ Relacionamentos delas e como ficaria nas colunas das tabelas;
 ⏭️ Uma explicação mínima de o que te levou por essas decisões.
 
+## 📖 Documentação do Projeto 
+
  <div align="center">
 
 <img src ="././public/assets/images/doc.png" alt="Descrição da Imagem" height="45">
 
-[ ( Clique aqui para saber mais da documentação) ](https://github.com/RaizerTechDev)
+[✨ **Clique aqui para saber mais da documentação** ✨](https://github.com/RaizerTechDev/tarefaStackX-organizacao-bd/blob/master/Documentation.md)
 
 <br>
 
