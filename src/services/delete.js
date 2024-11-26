@@ -57,9 +57,9 @@ const deletePlaces = async () => {
 const deleteBookings = async () => {
   try {
     const result = await Booking.deleteMany({});
-    console.log("Lugares excluídos:", result);
+    console.log("Reservas excluídas:", result);
   } catch (err) {
-    console.error("Erro ao excluir lugares:", err);
+    console.error("Erro ao excluir reservas:", err);
   }
 };
 
@@ -67,9 +67,9 @@ const deleteBookings = async () => {
 const deleteReviews = async () => {
   try {
     const result = await Review.deleteMany({});
-    console.log("Lugares excluídos:", result);
+    console.log("Avaliações excluídos:", result);
   } catch (err) {
-    console.error("Erro ao excluir lugares:", err);
+    console.error("Erro ao excluir avaliações:", err);
   }
 };
 

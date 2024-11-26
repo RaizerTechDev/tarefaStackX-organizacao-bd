@@ -1,4 +1,4 @@
-# Organização Banco de Dados - Airbnb
+# Documentação do Projeto Airbnb: Estrutura e Design para Escalabilidade
 
 # Sumário
 
