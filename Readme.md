@@ -7,7 +7,7 @@
 - [Instalação](#instalação-com-bash)
 - [Gerenciamento de Tabelas - Operações de Listar e Deletar](#gerenciamento-de-tabelas---operações-de-listar-e-deletar)
 - [Demonstração Código Resumido](#demonstração-código-resumido)
-   - [- `models/User.js`](#--modelsuserjs)
+  - [- `models/User.js`](#--modelsuserjs)
   - [- `database.js`](#--databasejs)
   - [- `index.js`](#--indexjs)
 
@@ -29,7 +29,9 @@ Descreva como você organizaria um banco de dados que precisa , no inicio, de:
 ⏭️ Relacionamentos delas e como ficaria nas colunas das tabelas;
 ⏭️ Uma explicação mínima de o que te levou por essas decisões.
 
-## 📖 Documentação do Projeto 
+---
+
+## 📖 Documentação do Projeto
 
  <div align="center">
 
@@ -72,6 +74,7 @@ npm install dotenv mongoose
 ```
 
 - Instalando pacotes para formatação
+
 ```
 npm install --save-dev eslint eslint-config-prettier eslint-plugin-prettier prettier
 ```
@@ -95,7 +98,9 @@ npm start
 Nesta parte do projeto serve para fornecer ferramentas simples para listar e deletar tabelas. Abaixo estão as instruções detalhadas para realizar essas operações.
 
 ### Como usar
+
 #### 1. Listar Tabelas:
+
 Para listar todas as tabelas disponíveis no sistema, execute o seguinte comando:
 
 ```bash
@@ -103,6 +108,7 @@ node src/services/list.js
 ```
 
 #### 2. Deletar Tabelas:
+
 Para deletar todas as tabelas disponíveis no sistema, execute o seguinte comando:
 
 ```bash
@@ -110,11 +116,13 @@ node src/services/delete.js
 ```
 
 ---
+
 ## Demonstração Código Resumido
 
-#### - `models/User.js`  
+#### - `models/User.js`
+
 ```javascript
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -123,24 +131,28 @@ const userSchema = new mongoose.Schema({
   created_at: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model('User', userSchema);
 ```
 
 <br>
 
 #### - `database.js`
+
 ```javascript
-require("dotenv").config();
-const mongoose = require("mongoose");
+require('dotenv').config();
+const mongoose = require('mongoose');
 
 const connectDB = async () => {
   const uri = process.env.MONGODB_URI;
 
   try {
-    await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    console.log("Conectado ao MongoDB!");
+    await mongoose.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('Conectado ao MongoDB!');
   } catch (err) {
-    console.error("Erro ao conectar:", err);
+    console.error('Erro ao conectar:', err);
     process.exit(1);
   }
 };
@@ -151,15 +163,16 @@ module.exports = connectDB;
 <br>
 
 #### - `index.js`
+
 ```javascript
-const connectDB = require("./src/database");
-const seedData = require("./src/seed");
-const User = require("./src/models/User");
+const connectDB = require('./src/database');
+const seedData = require('./src/seed');
+const User = require('./src/models/User');
 
 const start = async () => {
   await connectDB();
   const newUser = await seedData();
-  console.log("Dados iniciais criados:", newUser);
+  console.log('Dados iniciais criados:', newUser);
 };
 
 start();
