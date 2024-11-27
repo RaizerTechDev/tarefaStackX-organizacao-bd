@@ -29,6 +29,8 @@ Descreva como você organizaria um banco de dados que precisa , no inicio, de:
 ⏭️ Relacionamentos delas e como ficaria nas colunas das tabelas;
 ⏭️ Uma explicação mínima de o que te levou por essas decisões.
 
+<br>
+
 ---
 
 ## 📖 Documentação do Projeto
