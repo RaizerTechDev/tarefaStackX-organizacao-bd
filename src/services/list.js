@@ -1,15 +1,15 @@
-require("dotenv").config();
-const mongoose = require("mongoose");
-const User = require("../models/User");
-const Place = require("../models/Place");
-const Booking = require("../models/Booking");
-const Review = require("../models/Review");
+require('dotenv').config();
+const mongoose = require('mongoose');
+const User = require('../models/User');
+const Place = require('../models/Place');
+const Booking = require('../models/Booking');
+const Review = require('../models/Review');
 
 const connectDB = async () => {
   const uri = process.env.MONGODB_URI;
 
   if (!uri) {
-    console.error("Erro: MONGODB_URI não está definido no arquivo .env");
+    console.error('Erro: MONGODB_URI não está definido no arquivo .env');
     process.exit(1);
   }
 
@@ -18,7 +18,7 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("Conectado ao MongoDB!");
+    console.log('Conectado ao MongoDB!');
 
     // Chamar as funções de listagem após conectar ao banco de dados
     await listUsers();
@@ -28,7 +28,7 @@ const connectDB = async () => {
 
     process.exit(0); // Finaliza o processo com sucesso após listar os dados
   } catch (err) {
-    console.error("Erro ao conectar ao MongoDB:", err);
+    console.error('Erro ao conectar ao MongoDB:', err);
     process.exit(1);
   }
 };
@@ -37,9 +37,9 @@ const connectDB = async () => {
 const listUsers = async () => {
   try {
     const users = await User.find({});
-    console.log("Usuários:", users);
+    console.log('Usuários:', users);
   } catch (err) {
-    console.error("Erro ao listar usuários:", err);
+    console.error('Erro ao listar usuários:', err);
   }
 };
 
@@ -47,9 +47,9 @@ const listUsers = async () => {
 const listPlaces = async () => {
   try {
     const places = await Place.find({});
-    console.log("Lugares:", places);
+    console.log('Lugares:', places);
   } catch (err) {
-    console.error("Erro ao listar lugares:", err);
+    console.error('Erro ao listar lugares:', err);
   }
 };
 
@@ -57,9 +57,9 @@ const listPlaces = async () => {
 const listBookings = async () => {
   try {
     const bookings = await Booking.find({});
-    console.log("Reservas:", bookings);
+    console.log('Reservas:', bookings);
   } catch (err) {
-    console.error("Erro ao listar reservas:", err);
+    console.error('Erro ao listar reservas:', err);
   }
 };
 
@@ -67,9 +67,9 @@ const listBookings = async () => {
 const listReviews = async () => {
   try {
     const reviews = await Review.find({});
-    console.log("Avaliações:", reviews);
+    console.log('Avaliações:', reviews);
   } catch (err) {
-    console.error("Erro ao listar avaliações:", err);
+    console.error('Erro ao listar avaliações:', err);
   }
 };
 

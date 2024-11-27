@@ -71,6 +71,11 @@ cd nome-do-repositorio
 npm install dotenv mongoose
 ```
 
+- Instalando pacotes para formatação
+```
+npm install --save-dev eslint eslint-config-prettier eslint-plugin-prettier prettier
+```
+
 <br>
 
 - Inicie o servidor:
